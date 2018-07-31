@@ -1,1 +1,1 @@
-# reward_chart
+# Reward Chart
