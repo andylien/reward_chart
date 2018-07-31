@@ -1,0 +1,14 @@
+{
+  "name": "reward_chart",
+  "version": "1.0.0",
+  "description": "alexa skill for tracking points towards a reward",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Andy Lien",
+  "license": "ISC",
+  "dependencies": {
+    "ask-sdk": "^2.0.7"
+  }
+}
