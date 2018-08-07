@@ -1,11 +1,5 @@
 /* eslint-disable  func-names */
 /* eslint quote-props: ["error", "consistent"]*/
-/**
- * This sample demonstrates a simple skill built with the Amazon Alexa Skills
- * nodejs skill development kit.
- * The Intent Schema, Custom Slots and Sample Utterances for this skill, as well
- * as testing instructions are located at https://github.com/alexa/skill-sample-nodejs-fact
- **/
 
 'use strict';
 
@@ -18,7 +12,7 @@ const LaunchRequestHandler = {
         return handlerInput.requestEnvelope.request.type === 'LaunchRequest';
     },
     handle(handlerInput) {
-        const speechText = 'Welcome to the Alexa Skills Kit, you can say hello!';
+        const speechText = 'Welcome to the Alexa Skills Kit, Natalie is here!';
 
         return handlerInput.responseBuilder
             .speak(speechText)
@@ -28,13 +22,75 @@ const LaunchRequestHandler = {
     }
 };
 
+const AddPrizeIntentHandler = {
+    canHandle(handlerInput) {
+        return handlerInput.requestEnvelope.request.type === 'IntentRequest' &&
+            handlerInput.requestEnvelope.request.intent.name === 'AddPrizeIntent';
+    },
+    handle(handlerInput) {
+        console.log('In add prize intent');
+
+        let intent = handlerInput.requestEnvelope.request.intent;
+        console.log('slots: ' + JSON.stringify(intent.slots));
+
+        // Handle dialogState
+        let dialogState = handlerInput.requestEnvelope.request.dialogState;
+        if (dialogState !== 'COMPLETED') {
+          return handlerInput.responseBuilder
+            .addDelegateDirective(intent)
+            .getResponse();
+        }
+
+        let points = intent.slots.points.value;
+        let prize = intent.slots.prize.value;
+
+        const speechText = 'Okay. I added ' + prize + ' to the list of prizes for ' +
+          points + ' points.';
+
+        return handlerInput.responseBuilder
+            .speak(speechText)
+            .withSimpleCard('Hello World', speechText)
+            .getResponse();
+    },
+};
+
 const AddPointsIntentHandler = {
     canHandle(handlerInput) {
         return handlerInput.requestEnvelope.request.type === 'IntentRequest'
             && handlerInput.requestEnvelope.request.intent.name === 'AddPointsIntent';
     },
     handle(handlerInput) {
-        const speechText = 'Hello World!';
+        //console.log(`REQUEST++++${JSON.stringify(handlerInput)}`);
+
+        let intent = handlerInput.requestEnvelope.request.intent;
+        console.log(`intent: ${JSON.stringify(intent)}`);
+
+        // Handle dialogState
+        let dialogState = handlerInput.requestEnvelope.request.dialogState;
+        if (dialogState !== 'COMPLETED') {
+          return handlerInput.responseBuilder
+            .addDelegateDirective(intent)
+            .getResponse();
+        }
+
+        // Validate slots
+        //if (!intent.slots.person) {
+        //  return handlerInput.responseBuilder
+        //    .
+        //}
+        let points = intent.slots.points.value;
+        let person = intent.slots.person.value;
+        let activity = intent.slots.activity.value;
+
+        let points_txt = 'point';
+        if (points == undefined) {
+          points = 1;
+        }
+        if (points !== 1) {
+          points_txt = 'points';
+        }
+        const speechText = 'Okay. I gave ' + person + ' ' + points + ' ' +
+          points_txt + ' for ' + activity;
 
         return handlerInput.responseBuilder
             .speak(speechText)
@@ -107,7 +163,8 @@ exports.handler = async function (event, context) {
     skill = Alexa.SkillBuilders.custom()
       .addRequestHandlers(
         LaunchRequestHandler,
-        HelloWorldIntentHandler,
+        AddPointsIntentHandler,
+        AddPrizeIntentHandler,
         HelpIntentHandler,
         CancelAndStopIntentHandler,
         SessionEndedRequestHandler,

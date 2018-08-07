@@ -1,0 +1,85 @@
+{
+    "version": "1.0",
+    "session": {
+        "new": false,
+        "sessionId": "amzn1.echo-api.session.2fb62487-b96f-4d19-ba88-86f6c8f3ef61",
+        "application": {
+            "applicationId": "amzn1.ask.skill.58458007-7fc2-45b4-a3c6-8a32737699cb"
+        },
+        "user": {
+            "userId": "amzn1.ask.account.AH2ST3ITZEWCJDAU2YWDIOIZQ6DQXF6XJQZADV2BKAEXKFDA2LJ3BCH23HC65KY2QZHZBU6TT2ELL6JFRZ6NK545X33OQRWYH2BED65VCTJ3BVZ7SSOXTGJZ2D7F3IMGOH4BMCR62XZLGMRPS72WX2LF2LWXGIE6ANFDKMA7VWIHLGU2AEX2ALOG6KXZR3HLMKB5VNBQUKUPTHA"
+        }
+    },
+    "context": {
+        "System": {
+            "application": {
+                "applicationId": "amzn1.ask.skill.58458007-7fc2-45b4-a3c6-8a32737699cb"
+            },
+            "user": {
+                "userId": "amzn1.ask.account.AH2ST3ITZEWCJDAU2YWDIOIZQ6DQXF6XJQZADV2BKAEXKFDA2LJ3BCH23HC65KY2QZHZBU6TT2ELL6JFRZ6NK545X33OQRWYH2BED65VCTJ3BVZ7SSOXTGJZ2D7F3IMGOH4BMCR62XZLGMRPS72WX2LF2LWXGIE6ANFDKMA7VWIHLGU2AEX2ALOG6KXZR3HLMKB5VNBQUKUPTHA"
+            },
+            "device": {
+                "deviceId": "amzn1.ask.device.AEF7WVEGRTYHRNWXRWQ2AJOUJBP7GBDGPTRVWZJP5I3H6Q23PF4SFV6UVPYUGKHG756XDLIOPX7UUVYVLNFZMLZ4MWAM3FWIDWCVYJQOLXPLT5AONM24CE45NSZNWBESOAQNFWPOXNIOO6KKRFHHJKOM27LQ",
+                "supportedInterfaces": {}
+            },
+            "apiEndpoint": "https://api.amazonalexa.com",
+            "apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLjU4NDU4MDA3LTdmYzItNDViNC1hM2M2LThhMzI3Mzc2OTljYiIsImV4cCI6MTUzMzA2MzE0MiwiaWF0IjoxNTMzMDU5NTQyLCJuYmYiOjE1MzMwNTk1NDIsInByaXZhdGVDbGFpbXMiOnsiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUVGN1dWRUdSVFlIUk5XWFJXUTJBSk9VSkJQN0dCREdQVFJWV1pKUDVJM0g2UTIzUEY0U0ZWNlVWUFlVR0tIRzc1NlhETElPUFg3VVVWWVZMTkZaTUxaNE1XQU0zRldJRFdDVllKUU9MWFBMVDVBT05NMjRDRTQ1TlNaTldCRVNPQVFORldQT1hOSU9PNktLUkZISEpLT00yN0xRIiwidXNlcklkIjoiYW16bjEuYXNrLmFjY291bnQuQUgyU1QzSVRaRVdDSkRBVTJZV0RJT0laUTZEUVhGNlhKUVpBRFYyQktBRVhLRkRBMkxKM0JDSDIzSEM2NUtZMlFaSFpCVTZUVDJFTEw2SkZSWjZOSzU0NVgzM09RUldZSDJCRUQ2NVZDVEozQlZaN1NTT1hUR0paMkQ3RjNJTUdPSDRCTUNSNjJYWkxHTVJQUzcyV1gyTEYyTFdYR0lFNkFORkRLTUE3VldJSExHVTJBRVgyQUxPRzZLWFpSM0hMTUtCNVZOQlFVS1VQVEhBIn19.SyoHtF0LW3ylL-xuCJbFmksEGzdJZ-rcd3tXwu2k3PwRFXHJiRg7fTdCPk88G63EKd24fIytYCFXLSjLp0hZ6pmsnEd-N6YzK-wDL2EnYp-lTRWs8Eoi4JJJ3ZiNVMPvyo4dKZUl85kRj4Tn1sAqs9snfeJtzOahtViZnMvoycQ3M8bQiRtVEAe76r1tQbP5UTjnnuTu9qzkDHrp4wx-KJRxjQzy4-__vHHTwMe_vt3xRUiJqcLLDJdmQM50yFwg3EYNkPhiA8YXvQEAkLdVb3efGuQCynziCL5BHDo-S6qgBg9LWmMLWi1Lz2lPbS8VEmshXb5PnnkH0kMsf3_eMQ"
+        }
+    },
+    "request": {
+        "type": "IntentRequest",
+        "requestId": "amzn1.echo-api.request.c3bdfe59-183b-4d7d-9a93-549d279e1752",
+        "timestamp": "2018-07-31T17:52:22Z",
+        "locale": "en-US",
+        "intent": {
+            "name": "AddPointsIntent",
+            "confirmationStatus": "NONE",
+            "slots": {
+                "activity": {
+                    "name": "activity",
+                    "value": "brushing her teeth",
+                    "resolutions": {
+                        "resolutionsPerAuthority": [
+                            {
+                                "authority": "amzn1.er-authority.echo-sdk.amzn1.ask.skill.58458007-7fc2-45b4-a3c6-8a32737699cb.Activity",
+                                "status": {
+                                    "code": "ER_SUCCESS_NO_MATCH"
+                                }
+                            }
+                        ]
+                    },
+                    "confirmationStatus": "NONE"
+                },
+                "person": {
+                    "name": "person",
+                    "value": "Zoe",
+                    "resolutions": {
+                        "resolutionsPerAuthority": [
+                            {
+                                "authority": "amzn1.er-authority.echo-sdk.amzn1.ask.skill.58458007-7fc2-45b4-a3c6-8a32737699cb.Person",
+                                "status": {
+                                    "code": "ER_SUCCESS_MATCH"
+                                },
+                                "values": [
+                                    {
+                                        "value": {
+                                            "name": "Zoe",
+                                            "id": "b481127369b2113a7d5b1bb84adbd256"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "confirmationStatus": "NONE"
+                },
+                "points": {
+                    "name": "points",
+                    "value": "",
+                    "confirmationStatus": "NONE"
+                }
+            }
+        },
+        "dialogState": "STARTED"
+    }
+}
