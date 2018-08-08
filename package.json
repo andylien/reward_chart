@@ -2,9 +2,12 @@
   "name": "reward_chart",
   "version": "1.0.0",
   "description": "alexa skill for tracking points towards a reward",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "test"
+    "flow": "flow",
+    "test": "test",
+    "build": "babel src/ -d lib/",
+    "prepublish": "npm run build"
   },
   "author": {
     "name": "Andy Lien",
@@ -16,6 +19,7 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-flow": "^6.23.0"
+    "babel-preset-flow": "^6.23.0",
+    "flow-bin": "^0.78.0"
   }
 }
